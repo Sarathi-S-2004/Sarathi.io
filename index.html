@@ -2,70 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sarathi S - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sarathi S - Mechanical Engineer & Software Enthusiast</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f2f5;
-      color: #333;
-    }
-
-    header {
-      background: linear-gradient(135deg, #00274d, #005792);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    header img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      margin-top: 20px;
-    }
-
-    header h1 {
-      margin: 10px 0 5px;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      margin-bottom: 0;
-    }
-
-    main {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    section {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.05);
-    }
-
-    h2 {
-      color: #003366;
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 6px;
-    }
-
-    ul {
-      padding-left: 20px;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f9fc;
+      color: #2c3e50;
       line-height: 1.6;
+      font-size: 16px;
     }
 
     a {
-      color: #005792;
+      color: #1e88e5;
       text-decoration: none;
     }
 
@@ -73,28 +29,137 @@
       text-decoration: underline;
     }
 
-    .contact p {
-      margin: 6px 0;
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px 40px;
     }
 
-    footer {
-      background: #00274d;
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0d47a1, #1976d2);
       color: #fff;
       text-align: center;
-      padding: 20px;
+      padding: 60px 20px 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.85);
+      margin-top: 20px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      margin: 20px 0 6px;
+      font-weight: 700;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin: 0;
+      opacity: 0.9;
+      letter-spacing: 0.05em;
+    }
+
+    /* Section styles */
+    section {
+      background: #fff;
+      padding: 30px 35px;
+      margin-top: 30px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #0d47a1;
+      border-bottom: 3px solid #1e88e5;
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin: 0;
+      color: #34495e;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1em;
+      color: #34495e;
+    }
+
+    /* Contact links */
+    .contact p {
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #0d47a1;
+      color: #fff;
+      text-align: center;
+      padding: 20px 15px;
+      margin-top: 40px;
+      border-radius: 0 0 8px 8px;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      section {
+        padding: 20px 15px;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 18px;
+      }
+      ul li {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Sarathi S</h1>
-    <p>Mechanical Engineer | Software & Embedded Systems Enthusiast</p>
-    <img src="WhatsApp%20Image%202025-07-22%20at%2017.27.51_4eed20e3.jpg" alt="Sarathi S">
+    <p>Mechanical Engineer & Software Enthusiast</p>
+    <img src="WhatsApp%20Image%202025-07-22%20at%2017.27.51_4eed20e3.jpg" alt="Sarathi S" />
   </header>
-  <main>
+
+  <div class="container">
     <section>
       <h2>About Me</h2>
-      <p>I am a Mechanical Engineering student passionate about solving real-world problems using both hardware and software. My academic background, hands-on project experience, and interest in data, IoT, and automation make me a hybrid engineer with a multidisciplinary edge.</p>
+      <p>
+        I am a Mechanical Engineering student passionate about solving real-world problems using both hardware and software. My academic background and hands-on project experience make me a multidisciplinary engineer with a strong core and software foundation.
+      </p>
     </section>
 
     <section>
@@ -103,25 +168,15 @@
         <li>Python Programming</li>
         <li>Power BI (Beginner)</li>
         <li>Visual Basic for Applications (VBA)</li>
-        <li>Embedded Systems & IoT</li>
-        <li>Arduino, ESP32 Microcontrollers</li>
         <li>SQL & Data Analysis (Beginner)</li>
       </ul>
     </section>
 
     <section>
-      <h2>Mechanical Domain Projects</h2>
+      <h2>Projects</h2>
       <ul>
+        <li><strong>GEN CAM:</strong> AI-powered dash cam system for real-time driver drowsiness and alert management with live video streaming.</li>
         <li><strong>Enhanced Solar Water Heater using Nanofluids:</strong> Improved thermal efficiency using nanofluid-enhanced solar collectors.</li>
-        <li><strong>Voice Controlled Appliance:</strong> Designed and simulated in Proteus using APR9600 and AT89C51 for voice-triggered switching.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Software & Embedded Systems Projects</h2>
-      <ul>
-        <li><strong>DriverSense 360:</strong> AI-powered dash cam system for real-time drowsiness, distraction, and alert management with live video streaming.</li>
-        <li><strong>IoT Weather Logger:</strong> ESP32-based environment monitoring with live data push to cloud dashboards.</li>
       </ul>
     </section>
 
@@ -135,8 +190,8 @@
     <section>
       <h2>Paper Presentations</h2>
       <ul>
-        <li>Presented <strong>DriverSense 360</strong> at Mahendra Engineering College.</li>
-        <li>Presented <strong>DriverSense 360</strong> at Anna University RC, Coimbatore.</li>
+        <li>Presented <strong>GEN CAM</strong> at Mahendra Engineering College.</li>
+        <li>Presented <strong>GEN CAM</strong> at Anna University RC, Coimbatore.</li>
       </ul>
     </section>
 
@@ -152,10 +207,11 @@
       <h2>Contact</h2>
       <p>Email: <a href="mailto:sarathishanmugam@outlook.com">sarathishanmugam@outlook.com</a></p>
       <p>Phone: <a href="tel:+916381562503">+91 6381562503</a></p>
-      <p>GitHub: <a href="https://github.com/Sarathi-S-2004" target="_blank">github.com/Sarathi-S-2004</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/sarathi-s-82b7a4365" target="_blank">linkedin.com/in/sarathi-s-82b7a4365</a></p>
+      <p>GitHub: <a href="https://github.com/Sarathi-S-2004" target="_blank" rel="noopener noreferrer">github.com/Sarathi-S-2004</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/sarathi-s-82b7a4365" target="_blank" rel="noopener noreferrer">linkedin.com/in/sarathi-s-82b7a4365</a></p>
     </section>
-  </main>
+  </div>
+
   <footer>
     <p>&copy; 2025 Sarathi S. All rights reserved.</p>
   </footer>
