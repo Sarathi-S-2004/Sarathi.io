@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sarathi S - Mechanical Engineer & Software Enthusiast</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     /* Reset & base */
     * {
@@ -13,15 +13,16 @@
 
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f7f9fc;
-      color: #2c3e50;
-      line-height: 1.6;
+      font-family: 'Roboto Slab', serif;
+      background-color: #1e2a38;
+      color: #e1e8f0;
+      line-height: 1.5;
       font-size: 16px;
+      overflow-x: hidden;
     }
 
     a {
-      color: #1e88e5;
+      color: #82cfff;
       text-decoration: none;
     }
 
@@ -31,70 +32,41 @@
 
     /* Container */
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: 40px auto 60px;
       padding: 0 20px;
     }
 
-    /* Header */
-    header {
-      background: linear-gradient(135deg, #0d47a1, #1976d2);
-      color: #fff;
-      text-align: center;
-      padding: 60px 20px 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    /* Section marquee styles */
+    .marquee-container {
       position: relative;
       overflow: hidden;
-    }
-
-    header img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 3px solid rgba(255, 255, 255, 0.85);
-      margin-top: 20px;
-      object-fit: cover;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
-
-    header h1 {
-      margin: 20px 0 6px;
-      font-weight: 700;
-      font-size: 2.8rem;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      font-size: 1.25rem;
-      font-weight: 400;
-      margin: 0;
-      opacity: 0.9;
-      letter-spacing: 0.05em;
-    }
-
-    /* Moving line (marquee style) */
-    .moving-line {
-      white-space: nowrap;
-      overflow: hidden;
-      box-sizing: border-box;
-      background: #e3f2fd;
-      border-radius: 6px;
-      padding: 12px 0;
+      border-radius: 10px;
       margin: 30px 0;
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #0d47a1;
-      border: 1px solid #90caf9;
+      background: #2b3a4b;
+      border: 1px solid #3a4b5f;
+      box-shadow: 0 0 10px rgba(130, 207, 255, 0.3);
+      padding: 15px 0;
     }
 
-    .moving-line-content {
+    .marquee-content {
       display: inline-block;
+      white-space: nowrap;
       padding-left: 100%;
-      animation: scroll-left 20s linear infinite;
+      animation: marqueeScroll 40s linear infinite;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #82cfff;
+      letter-spacing: 0.05em;
+      user-select: none;
     }
 
-    @keyframes scroll-left {
+    .marquee-content:hover {
+      animation-play-state: paused;
+      cursor: pointer;
+    }
+
+    @keyframes marqueeScroll {
       0% {
         transform: translateX(0%);
       }
@@ -103,257 +75,204 @@
       }
     }
 
-    /* Section styles */
-    section {
-      background: #fff;
-      padding: 30px 35px;
-      margin-top: 30px;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-    }
-
+    /* Section titles */
     h2 {
       font-weight: 700;
       font-size: 1.8rem;
-      color: #0d47a1;
-      border-bottom: 3px solid #1e88e5;
-      padding-bottom: 8px;
-      margin-bottom: 24px;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin: 0;
-      color: #34495e;
-      display: block;
-    }
-
-    ul li {
-      margin-bottom: 12px;
-      font-size: 1rem;
-    }
-
-    p {
-      font-size: 1rem;
-      margin-bottom: 1em;
-      color: #34495e;
-    }
-
-    /* Skills carousel */
-    .skills-carousel {
-      overflow: hidden;
-      background: #f1f8ff;
-      border-radius: 8px;
-      padding: 20px 0;
-      margin-bottom: 40px;
-      border: 1px solid #90caf9;
-    }
-
-    .skills-track {
-      display: flex;
-      gap: 40px;
-      animation: scroll-left-slow 30s linear infinite;
-    }
-
-    .skills-track:hover {
-      animation-play-state: paused;
-      cursor: pointer;
-    }
-
-    .skills-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 80px;
-      color: #0d47a1;
-      font-weight: 600;
-      font-size: 0.9rem;
-      user-select: none;
-      transition: transform 0.3s ease;
-    }
-
-    .skills-item img {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 8px;
-      object-fit: contain;
-      filter: drop-shadow(0 0 2px rgba(0,0,0,0.15));
-      transition: transform 0.3s ease;
-    }
-
-    .skills-item:hover {
-      transform: scale(1.15);
-      color: #1565c0;
-    }
-
-    .skills-item:hover img {
-      transform: scale(1.2);
-      filter: drop-shadow(0 0 4px rgba(21,101,192,0.8));
-    }
-
-    @keyframes scroll-left-slow {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    /* Contact links */
-    .contact p {
-      margin: 10px 0;
-      font-size: 1rem;
-    }
-
-    /* Footer */
-    footer {
-      background: #0d47a1;
-      color: #fff;
+      color: #82cfff;
+      margin-bottom: 10px;
       text-align: center;
-      padding: 20px 15px;
-      margin-top: 40px;
-      border-radius: 0 0 8px 8px;
-      font-size: 0.95rem;
-      letter-spacing: 0.05em;
-      user-select: none;
+      letter-spacing: 0.1em;
+      text-shadow: 0 0 10px #4a90e2;
+    }
+
+    /* Skill icons inline */
+    .skill-icon {
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+      margin: 0 6px 0 0;
+      filter: drop-shadow(0 0 1px #82cfff);
+    }
+
+    /* General paragraphs inline for marquee */
+    .marquee-text {
+      display: inline-block;
+      margin-right: 60px;
+      color: #d3e8ff;
     }
 
     /* Responsive */
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
+    @media (max-width: 600px) {
+      .marquee-content {
         font-size: 1rem;
+        padding-left: 50%;
       }
-      section {
-        padding: 20px 15px;
+      .marquee-text {
+        margin-right: 40px;
       }
       h2 {
         font-size: 1.5rem;
-        margin-bottom: 18px;
-      }
-      ul li {
-        font-size: 0.95rem;
-      }
-      .skills-item {
-        width: 60px;
-        font-size: 0.8rem;
-      }
-      .skills-item img {
-        width: 40px;
-        height: 40px;
       }
     }
+
   </style>
 </head>
 <body>
-  <header>
-    <h1>Sarathi S</h1>
-    <p>Mechanical Engineer & Software Enthusiast</p>
-    <img src="WhatsApp%20Image%202025-07-22%20at%2017.27.51_4eed20e3.jpg" alt="Sarathi S" />
+  <header style="text-align:center; padding: 40px 10px;">
+    <h1 style="color:#82cfff; font-size:3rem; font-weight:700; text-shadow: 0 0 15px #4a90e2;">Sarathi S</h1>
+    <p style="font-size:1.25rem; color:#a3c9ff; margin-top: 0; font-style: italic;">Mechanical Engineer & Software Enthusiast</p>
+    <img src="WhatsApp%20Image%202025-07-22%20at%2017.27.51_4eed20e3.jpg" alt="Sarathi S" 
+         style="width:140px; height:140px; border-radius:50%; border: 3px solid #82cfff; margin-top: 20px; box-shadow: 0 0 15px #4a90e2;" />
   </header>
 
   <div class="container">
 
-    <div class="moving-line" aria-label="Key skills and interests">
-      <div class="moving-line-content">
-        Mechanical Engineer • Software Enthusiast • Python Programming • Power BI • VBA • SQL & Data Analysis
-      </div>
-    </div>
-
+    <!-- About Me marquee -->
     <section>
       <h2>About Me</h2>
-      <p>
-        I am a Mechanical Engineering student passionate about solving real-world problems using both hardware and software. My academic background and hands-on project experience make me a multidisciplinary engineer with a strong core and software foundation.
-      </p>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <div class="skills-carousel" aria-label="Skills carousel with icons">
-        <div class="skills-track">
-          <div class="skills-item">
-            <img src="https://cdn-icons-png.flaticon.com/512/1822/1822899.png" alt="Python" />
-            Python
-          </div>
-          <div class="skills-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Power_BI_logo.png" alt="Power BI" />
-            Power BI
-          </div>
-          <div class="skills-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Visual_Basic_logo.svg" alt="VBA" />
-            VBA
-          </div>
-          <div class="skills-item">
-            <img src="https://cdn-icons-png.flaticon.com/512/1179/1179124.png" alt="SQL" />
-            SQL
-          </div>
-          <!-- repeat skills to fill scrolling area -->
-          <div class="skills-item">
-            <img src="https://cdn-icons-png.flaticon.com/512/1822/1822899.png" alt="Python" />
-            Python
-          </div>
-          <div class="skills-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Power_BI_logo.png" alt="Power BI" />
-            Power BI
-          </div>
-          <div class="skills-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Visual_Basic_logo.svg" alt="VBA" />
-            VBA
-          </div>
-          <div class="skills-item">
-            <img src="https://cdn-icons-png.flaticon.com/512/1179/1179124.png" alt="SQL" />
-            SQL
-          </div>
+      <div class="marquee-container" aria-label="About Me scrolling marquee">
+        <div class="marquee-content">
+          <span class="marquee-text">
+            I am a Mechanical Engineering student passionate about solving real-world problems using both hardware and software.
+          </span>
+          <span class="marquee-text">
+            My academic background and hands-on project experience make me a multidisciplinary engineer with a strong core and software foundation.
+          </span>
         </div>
       </div>
     </section>
 
+    <!-- Skills marquee -->
+    <section>
+      <h2>Skills</h2>
+      <div class="marquee-container" aria-label="Skills scrolling marquee">
+        <div class="marquee-content">
+          <span class="marquee-text">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon" />
+            Python
+          </span>
+          <span class="marquee-text">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg" alt="Power BI" class="skill-icon" />
+            Power BI
+          </span>
+          <span class="marquee-text">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vba/vba-original.svg" alt="VBA" class="skill-icon" />
+            VBA
+          </span>
+          <span class="marquee-text">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="skill-icon" />
+            SQL & Data Analysis
+          </span>
+          <!-- Repeat skills to fill scrolling -->
+          <span class="marquee-text">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon" />
+            Python
+          </span>
+          <span class="marquee-text">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg" alt="Power BI" class="skill-icon" />
+            Power BI
+          </span>
+          <span class="marquee-text">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vba/vba-original.svg" alt="VBA" class="skill-icon" />
+            VBA
+          </span>
+          <span class="marquee-text">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="skill-icon" />
+            SQL & Data Analysis
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects marquee -->
     <section>
       <h2>Projects</h2>
-      <ul>
-        <li><strong>GEN CAM:</strong> AI-powered dash cam system for real-time driver drowsiness and alert management with live video streaming.</li>
-        <li><strong>Enhanced Solar Water Heater using Nanofluids:</strong> Improved thermal efficiency using nanofluid-enhanced solar collectors.</li>
-      </ul>
+      <div class="marquee-container" aria-label="Projects scrolling marquee">
+        <div class="marquee-content">
+          <span class="marquee-text">
+            <strong>GEN CAM:</strong> AI-powered dash cam system for real-time driver drowsiness and alert management with live video streaming.
+          </span>
+          <span class="marquee-text">
+            <strong>Enhanced Solar Water Heater using Nanofluids:</strong> Improved thermal efficiency using nanofluid-enhanced solar collectors.
+          </span>
+          <!-- Repeat projects to fill space -->
+          <span class="marquee-text">
+            <strong>GEN CAM:</strong> AI-powered dash cam system for real-time driver drowsiness and alert management with live video streaming.
+          </span>
+          <span class="marquee-text">
+            <strong>Enhanced Solar Water Heater using Nanofluids:</strong> Improved thermal efficiency using nanofluid-enhanced solar collectors.
+          </span>
+        </div>
+      </div>
     </section>
 
+    <!-- Education marquee -->
     <section>
       <h2>Education</h2>
-      <p><strong>B.E. Mechanical Engineering</strong> - VSB Engineering College, Karur</p>
-      <p><strong>HSC & SSLC</strong> - SSV Higher Secondary School, Kodumudi, Erode</p>
-      <p><strong>Extra-Curricular:</strong> NCC Cadet ("A" Certificate holder)</p>
+      <div class="marquee-container" aria-label="Education scrolling marquee">
+        <div class="marquee-content">
+          <span class="marquee-text"><strong>B.E. Mechanical Engineering</strong> - VSB Engineering College, Karur</span>
+          <span class="marquee-text"><strong>HSC & SSLC</strong> - SSV Higher Secondary School, Kodumudi, Erode</span>
+          <span class="marquee-text"><strong>Extra-Curricular:</strong> NCC Cadet ("A" Certificate holder)</span>
+          <!-- Repeat to fill space -->
+          <span class="marquee-text"><strong>B.E. Mechanical Engineering</strong> - VSB Engineering College, Karur</span>
+          <span class="marquee-text"><strong>HSC & SSLC</strong> - SSV Higher Secondary School, Kodumudi, Erode</span>
+          <span class="marquee-text"><strong>Extra-Curricular:</strong> NCC Cadet ("A" Certificate holder)</span>
+        </div>
+      </div>
     </section>
 
+    <!-- Paper Presentations marquee -->
     <section>
       <h2>Paper Presentations</h2>
-      <ul>
-        <li>Presented <strong>GEN CAM</strong> at Mahendra Engineering College.</li>
-        <li>Presented <strong>GEN CAM</strong> at Anna University RC, Coimbatore.</li>
-      </ul>
+      <div class="marquee-container" aria-label="Paper Presentations scrolling marquee">
+        <div class="marquee-content">
+          <span class="marquee-text">Presented <strong>GEN CAM</strong> at Mahendra Engineering College.</span>
+          <span class="marquee-text">Presented <strong>GEN CAM</strong> at Anna University RC, Coimbatore.</span>
+          <!-- Repeat -->
+          <span class="marquee-text">Presented <strong>GEN CAM</strong> at Mahendra Engineering College.</span>
+          <span class="marquee-text">Presented <strong>GEN CAM</strong> at Anna University RC, Coimbatore.</span>
+        </div>
+      </div>
     </section>
 
+    <!-- Workshops marquee -->
     <section>
       <h2>Workshops & Certifications</h2>
-      <ul>
-        <li><strong>EV & Energy Storage Tech</strong> – Hands-on Workshop, 24–28 March 2025, NIT Trichy</li>
-        <li><strong>Autodesk Design Tools</strong> – Workshop at Anna University RC</li>
-      </ul>
+      <div class="marquee-container" aria-label="Workshops and Certifications scrolling marquee">
+        <div class="marquee-content">
+          <span class="marquee-text"><strong>EV & Energy Storage Tech</strong> – Hands-on Workshop, 24–28 March 2025, NIT Trichy</span>
+          <span class="marquee-text"><strong>Autodesk Design Tools</strong> – Workshop at Anna University RC</span>
+          <!-- Repeat -->
+          <span class="marquee-text"><strong>EV & Energy Storage Tech</strong> – Hands-on Workshop, 24–28 March 2025, NIT Trichy</span>
+          <span class="marquee-text"><strong>Autodesk Design Tools</strong> – Workshop at Anna University RC</span>
+        </div>
+      </div>
     </section>
 
-    <section class="contact">
+    <!-- Contact marquee -->
+    <section>
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:sarathishanmugam@outlook.com">sarathishanmugam@outlook.com</a></p>
-      <p>Phone: <a href="tel:+916381562503">+91 6381562503</a></p>
-      <p>GitHub: <a href="https://github.com/Sarathi-S-2004" target="_blank" rel="noopener noreferrer">github.com/Sarathi-S-2004</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/sarathi-s-82b7a4365" target="_blank" rel="noopener noreferrer">linkedin.com/in/sarathi-s-82b7a4365</a></p>
+      <div class="marquee-container" aria-label="Contact scrolling marquee">
+        <div class="marquee-content">
+          <span class="marquee-text">Email: <a href="mailto:sarathishanmugam@outlook.com">sarathishanmugam@outlook.com</a></span>
+          <span class="marquee-text">Phone: <a href="tel:+916381562503">+91 6381562503</a></span>
+          <span class="marquee-text">GitHub: <a href="https://github.com/Sarathi-S-2004" target="_blank" rel="noopener noreferrer">github.com/Sarathi-S-2004</a></span>
+          <span class="marquee-text">LinkedIn: <a href="https://www.linkedin.com/in/sarathi-s-82b7a4365" target="_blank" rel="noopener noreferrer">linkedin.com/in/sarathi-s-82b7a4365</a></span>
+          <!-- Repeat -->
+          <span class="marquee-text">Email: <a href="mailto:sarathishanmugam@outlook.com">sarathishanmugam@outlook.com</a></span>
+          <span class="marquee-text">Phone: <a href="tel:+916381562503">+91 6381562503</a></span>
+          <span class="marquee-text">GitHub: <a href="https://github.com/Sarathi-S-2004" target="_blank" rel="noopener noreferrer">github.com/Sarathi-S-2004</a></span>
+          <span class="marquee-text">LinkedIn: <a href="https://www.linkedin.com/in/sarathi-s-82b7a4365" target="_blank" rel="noopener noreferrer">linkedin.com/in/sarathi-s-82b7a4365</a></span>
+        </div>
+      </div>
     </section>
+
   </div>
 
-  <footer>
-    <p>&copy; 2025 Sarathi S. All rights reserved.</p>
+  <footer style="text-align:center; padding: 20px 10px; color:#82cfff; user-select:none; letter-spacing:0.1em; background:#0a1a2a;">
+    &copy; 2025 Sarathi S. All rights reserved.
   </footer>
 </body>
 </html>
