@@ -32,8 +32,8 @@
     /* Container */
     .container {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px 40px;
+      margin: 40px auto 60px;
+      padding: 0 20px;
     }
 
     /* Header */
@@ -44,6 +44,8 @@
       padding: 60px 20px 40px;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
     }
 
     header img {
@@ -71,6 +73,36 @@
       letter-spacing: 0.05em;
     }
 
+    /* Moving line (marquee style) */
+    .moving-line {
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+      background: #e3f2fd;
+      border-radius: 6px;
+      padding: 12px 0;
+      margin: 30px 0;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #0d47a1;
+      border: 1px solid #90caf9;
+    }
+
+    .moving-line-content {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 20s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
     /* Section styles */
     section {
       background: #fff;
@@ -94,6 +126,7 @@
       padding-left: 20px;
       margin: 0;
       color: #34495e;
+      display: block;
     }
 
     ul li {
@@ -105,6 +138,67 @@
       font-size: 1rem;
       margin-bottom: 1em;
       color: #34495e;
+    }
+
+    /* Skills carousel */
+    .skills-carousel {
+      overflow: hidden;
+      background: #f1f8ff;
+      border-radius: 8px;
+      padding: 20px 0;
+      margin-bottom: 40px;
+      border: 1px solid #90caf9;
+    }
+
+    .skills-track {
+      display: flex;
+      gap: 40px;
+      animation: scroll-left-slow 30s linear infinite;
+    }
+
+    .skills-track:hover {
+      animation-play-state: paused;
+      cursor: pointer;
+    }
+
+    .skills-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80px;
+      color: #0d47a1;
+      font-weight: 600;
+      font-size: 0.9rem;
+      user-select: none;
+      transition: transform 0.3s ease;
+    }
+
+    .skills-item img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 8px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 2px rgba(0,0,0,0.15));
+      transition: transform 0.3s ease;
+    }
+
+    .skills-item:hover {
+      transform: scale(1.15);
+      color: #1565c0;
+    }
+
+    .skills-item:hover img {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 4px rgba(21,101,192,0.8));
+    }
+
+    @keyframes scroll-left-slow {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
     /* Contact links */
@@ -144,6 +238,14 @@
       ul li {
         font-size: 0.95rem;
       }
+      .skills-item {
+        width: 60px;
+        font-size: 0.8rem;
+      }
+      .skills-item img {
+        width: 40px;
+        height: 40px;
+      }
     }
   </style>
 </head>
@@ -155,6 +257,13 @@
   </header>
 
   <div class="container">
+
+    <div class="moving-line" aria-label="Key skills and interests">
+      <div class="moving-line-content">
+        Mechanical Engineer • Software Enthusiast • Python Programming • Power BI • VBA • SQL & Data Analysis
+      </div>
+    </div>
+
     <section>
       <h2>About Me</h2>
       <p>
@@ -164,12 +273,43 @@
 
     <section>
       <h2>Skills</h2>
-      <ul>
-        <li>Python Programming</li>
-        <li>Power BI (Beginner)</li>
-        <li>Visual Basic for Applications (VBA)</li>
-        <li>SQL & Data Analysis (Beginner)</li>
-      </ul>
+      <div class="skills-carousel" aria-label="Skills carousel with icons">
+        <div class="skills-track">
+          <div class="skills-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/1822/1822899.png" alt="Python" />
+            Python
+          </div>
+          <div class="skills-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Power_BI_logo.png" alt="Power BI" />
+            Power BI
+          </div>
+          <div class="skills-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Visual_Basic_logo.svg" alt="VBA" />
+            VBA
+          </div>
+          <div class="skills-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/1179/1179124.png" alt="SQL" />
+            SQL
+          </div>
+          <!-- repeat skills to fill scrolling area -->
+          <div class="skills-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/1822/1822899.png" alt="Python" />
+            Python
+          </div>
+          <div class="skills-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Power_BI_logo.png" alt="Power BI" />
+            Power BI
+          </div>
+          <div class="skills-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Visual_Basic_logo.svg" alt="VBA" />
+            VBA
+          </div>
+          <div class="skills-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/1179/1179124.png" alt="SQL" />
+            SQL
+          </div>
+        </div>
+      </div>
     </section>
 
     <section>
